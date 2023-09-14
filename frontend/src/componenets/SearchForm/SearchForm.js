@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import FilterCheckbox from "../../FilterCheckbox/FilterCheckbox"
+import FilterCheckbox from "../FilterCheckbox/FilterCheckbox"
 import { useLocation } from "react-router-dom"
 import "./SearchForm.css"
 
@@ -18,8 +18,8 @@ function SearchForm({ getSearchMovies, onFilterMovies, isShortMovies }) {
     }
   }, [location])
 
-  function getEditProfileInfo(event) {
-    event.preventDefault()
+  function editProfileInfo(e) {
+    e.preventDefault()
     if (query.trim().length === 0) {
       setIsQueryError(true)
     } else {
@@ -28,20 +28,20 @@ function SearchForm({ getSearchMovies, onFilterMovies, isShortMovies }) {
     }
   }
 
-  function getInputChange(event) {
-    setQuery(event.target.value)
+  function inputChange(e) {
+    setQuery(e.target.value)
   }
 
   return (
     <section className="search">
-      <form className="search__form" id="form" onSubmit={getEditProfileInfo}>
+      <form className="search__form" id="form" onSubmit={editProfileInfo}>
         <input
           className="search__form-input"
           name="query"
           placeholder="Фильм"
           type="text"
           value={query || ""}
-          onChange={getInputChange}
+          onChange={inputChange}
           required
         ></input>
         <button className="search__form-button" type="submit"></button>

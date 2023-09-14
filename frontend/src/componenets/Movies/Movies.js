@@ -15,8 +15,8 @@ function Movies({ loggedIn, savedMovies, getLikeMovie, onDeleteCard }) {
   const [isReqError, setisReqError] = useState(false)
   const [isNotFound, setIsNotFound] = useState(false)
 
-  // Функция поиска фильмов
-  function getSearchMovies(query) {
+  /** поиск фильмов */
+  function searchMovies(query) {
     localStorage.setItem("movieSearch", query)
     localStorage.setItem("shortMovies", isShortMovies)
     if (localStorage.getItem("allMovies")) {
@@ -40,7 +40,7 @@ function Movies({ loggedIn, savedMovies, getLikeMovie, onDeleteCard }) {
     }
   }
 
-  function getShortMoviesToggle() {
+  function shortMoviesToggle() {
     setisShortMovies(!isShortMovies)
     if (!isShortMovies) {
       const filteredCardsMovies = counterDurationMovie(initialCardsMovies)
@@ -93,8 +93,8 @@ function Movies({ loggedIn, savedMovies, getLikeMovie, onDeleteCard }) {
       <Header loggedIn={loggedIn} />
       <SearchForm
         isShortMovies={isShortMovies}
-        onFilterMovies={getShortMoviesToggle}
-        getSearchMovies={getSearchMovies}
+        onFilterMovies={shortMoviesToggle}
+        searchMovies={searchMovies}
       />
       <MoviesCardList
         cards={filteredMovies}

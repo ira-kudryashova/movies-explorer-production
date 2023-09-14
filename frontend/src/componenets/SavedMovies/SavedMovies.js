@@ -29,11 +29,11 @@ function SavedMovies({ loggedIn, onDeleteCard, savedMovies }) {
     )
   }, [savedMovies, isShortMovies, searchQuery])
 
-  function getSearchMovies(query) {
+  function searchMovies(query) {
     setSearchQuery(query)
   }
 
-  function getShortMoviesToggle() {
+  function shortMoviesToggle() {
     setisShortMovies(!isShortMovies)
   }
 
@@ -41,8 +41,8 @@ function SavedMovies({ loggedIn, onDeleteCard, savedMovies }) {
     <section className="movies">
       <Header loggedIn={loggedIn} />
       <SearchForm
-        onFilterMovies={getShortMoviesToggle}
-        getSearchMovies={getSearchMovies}
+        onFilterMovies={shortMoviesToggle}
+        searchMovies={searchMovies}
       />
       <MoviesCardList
         cards={filteredMovies}

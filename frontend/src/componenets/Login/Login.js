@@ -5,10 +5,10 @@ import { EMAIL_REGEX } from "../../utils/config"
 import "../Form/Form.css"
 
 function Login({ onAuthorization, isLoading }) {
-  // Хук useForm()
+  /** хук useForm() */
   const { enteredValues, errors, handleChangeInput, isFormValid } = useForm()
 
-  function getEditProfileInfo(event) {
+  function editProfileInfo(event) {
     event.preventDefault()
     onAuthorization({
       email: enteredValues.email,
@@ -25,7 +25,7 @@ function Login({ onAuthorization, isLoading }) {
       link="/signup"
       isLoading={isLoading}
       isDisabledButton={!isFormValid}
-      onSubmit={getEditProfileInfo}
+      onSubmit={editProfileInfo}
     >
       <label className="form__label">
         E-mail

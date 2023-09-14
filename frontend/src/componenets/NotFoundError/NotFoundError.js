@@ -6,7 +6,7 @@ import { Link } from "react-scroll"
 function NotFoundError() {
   const navigate = useNavigate()
   function navigateBack() {
-    navigate(-3)
+    navigate(-1)
   }
 
   return (

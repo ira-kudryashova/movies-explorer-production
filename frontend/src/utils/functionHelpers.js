@@ -1,4 +1,4 @@
-import { MAX_DURATION_MOVIE } from "./config"
+import { MAX_DURATION_MOVIE } from "./constants.js"
 
 export const getCheckResponse = (res) => {
   if (res.ok) {
@@ -7,20 +7,19 @@ export const getCheckResponse = (res) => {
   return Promise.reject(`Error: ${res.status}`)
 }
 
-// Функция принимает значение длительности фильмов
-// в минутах и конвертирует его в часы и минуты
+/** конвертация продолжительности фильмов в минутах в часы и минуты */
 export function converterDurationMovie(duration) {
   const hours = Math.floor(duration / 60)
   const minutes = duration % 60
   return `${hours}ч${minutes}м`
 }
 
-// Длительность фильмов
+/** длительность фильмов */
 export function counterDurationMovie(movies) {
   return movies.filter((movie) => movie.duration < MAX_DURATION_MOVIE)
 }
 
-// Короткометражки
+/** короткометражки */
 export function filterMovies(movies, query) {
   const moviesQuery = movies.filter((movie) => {
     const movieRu = String(movie.nameRU).toLowerCase().trim()

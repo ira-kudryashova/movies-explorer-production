@@ -4,7 +4,7 @@ import account from "../../images/profile.svg"
 import "./Navigation.css"
 
 function Navigation({ handleCloseMobileMenu }) {
-  const setactiveColorHeaderLink = ({ isActive }) =>
+  const setActiveColorHeaderLink = ({ isActive }) =>
     isActive ? "navigation__link_active" : "navigation__link"
 
   return (
@@ -16,13 +16,13 @@ function Navigation({ handleCloseMobileMenu }) {
           className="navigation__close-button"
         ></button>
         <nav className="navigation__links">
-          <NavLink to="/" className={setactiveColorHeaderLink}>
+          <NavLink to="/" className={setActiveColorHeaderLink}>
             Главная
           </NavLink>
-          <NavLink to="/movies" className={setactiveColorHeaderLink}>
+          <NavLink to="/movies" className={setActiveColorHeaderLink}>
             Фильмы
           </NavLink>
-          <NavLink to="/saved-movies" className={setactiveColorHeaderLink}>
+          <NavLink to="/saved-movies" className={setActiveColorHeaderLink}>
             Сохранённые фильмы
           </NavLink>
         </nav>

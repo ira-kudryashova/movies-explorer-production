@@ -23,7 +23,7 @@ function MoviesCardList({
   const { pathname } = useLocation()
   const [shownMovies, setShownMovies] = useState(0)
 
-  function getShowMoviesDisplay() {
+  function showMoviesDisplay() {
     const display = window.innerWidth
     if (display > 1023) {
       setShownMovies(12)
@@ -35,12 +35,12 @@ function MoviesCardList({
   }
 
   useEffect(() => {
-    getShowMoviesDisplay()
+    showMoviesDisplay()
   }, [cards])
 
   useEffect(() => {
     setTimeout(() => {
-      window.addEventListener("resize", getShowMoviesDisplay)
+      window.addEventListener("resize", showMoviesDisplay)
     }, 500)
   })
 

@@ -8,8 +8,8 @@ function Register({ isLoading, getRegistrationUser }) {
   // Хук useForm()
   const { enteredValues, errors, handleChangeInput, isFormValid } = useForm()
 
-  function getEditProfileInfo(event) {
-    event.preventDefault()
+  function editProfileInfo(e) {
+    e.preventDefault()
     getRegistrationUser({
       name: enteredValues.name,
       email: enteredValues.email,
@@ -24,7 +24,7 @@ function Register({ isLoading, getRegistrationUser }) {
       registrationPrompt="Уже зарегистрированы?"
       linkText=" Войти"
       link="/signin"
-      onSubmit={getEditProfileInfo}
+      onSubmit={editProfileInfo}
       isLoading={isLoading}
       isDisabledButton={!isFormValid}
     >

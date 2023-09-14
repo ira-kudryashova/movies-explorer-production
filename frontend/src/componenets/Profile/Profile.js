@@ -7,10 +7,10 @@ import useForm from "../../hooks/useForm"
 import CurrentUserContext from "../../contexts/CurrentUserContext"
 
 function Profile({ loggedIn, isLoading, onUpdateUser, signOut }) {
-  // Подписка на контекст
+  /** подписка на контекст */
   const currentUser = useContext(CurrentUserContext)
 
-  // Xук useForm для управления формами
+  /** хук useForm для управления формами */
   const { enteredValues, errors, handleChangeInput, isFormValid, resetForm } =
     useForm()
 
@@ -22,8 +22,8 @@ function Profile({ loggedIn, isLoading, onUpdateUser, signOut }) {
     }
   }, [currentUser, resetForm])
 
-  function getEditProfileInfo(event) {
-    event.preventDefault()
+  function editProfileInfo(e) {
+    e.preventDefault()
     onUpdateUser({
       name: enteredValues.name,
       email: enteredValues.email,
@@ -50,7 +50,7 @@ function Profile({ loggedIn, isLoading, onUpdateUser, signOut }) {
         <form
           id="form"
           className="profile__form"
-          onSubmit={getEditProfileInfo}
+          onSubmit={editProfileInfo}
           noValidate
         >
           <label className="profile__label">
