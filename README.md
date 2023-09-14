@@ -36,6 +36,6 @@ frontend https://api.final.irakudryashova.nomoredomainsicu.ru
 
 ## Для запуска требуется установленный Node.js.
 
-npm start для работы с проектом в режиме разработчика
-npm run build для финальной сборки
-npm run server запуск билд версии на
+* npm start для работы с проектом в режиме разработчика
+* npm run build для финальной сборки
+* npm run server запуск билд версии на
