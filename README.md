@@ -6,6 +6,7 @@ https://github.com/ira-kudryashova/movies-explorer-production
 
 ## ссылка на pull request
 
+https://github.com/ira-kudryashova/movies-explorer-production/pull/1 
 
 ## ссылка на frontend и api
 
