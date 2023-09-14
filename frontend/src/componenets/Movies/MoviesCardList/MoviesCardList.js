@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
-import MoviesCard from "../MoviesCard/MoviesCard"
-import SearchError from "../../SearchError/SearchError"
+import MoviesCard from "../MoviesCard/MoviesCard.js"
+import SearchError from "../../SearchError/SearchError.js"
 import {
   DESKTOP_COUNTER_MOVIES,
   TABLET_COUNTER_MOVIES,
   MOBILE_COUNTER_MOVIES,
-} from "../../../utils/config"
-import Preloader from "../Preloader/Preloader"
+} from "../../../utils/constants.js"
+import Preloader from "../Preloader/Preloader.js"
 import "./MoviesCardList.css"
 
 function MoviesCardList({

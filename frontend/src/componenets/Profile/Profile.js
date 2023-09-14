@@ -1,10 +1,10 @@
 import React, { useEffect, useContext, useState } from "react"
 import { Link } from "react-router-dom"
-import Header from "../Header/Header"
-import { EMAIL_REGEX } from "../../utils/config"
+import Header from "../Header/Header.js"
+import { EMAIL_REGEX } from "../../utils/constants.js"
 import "./Profile.css"
-import useForm from "../../hooks/useForm"
-import CurrentUserContext from "../../contexts/CurrentUserContext"
+import useForm from "../../hooks/useForm.js"
+import CurrentUserContext from "../../contexts/CurrentUserContext.js"
 
 function Profile({ loggedIn, isLoading, onUpdateUser, signOut }) {
   /** подписка на контекст */

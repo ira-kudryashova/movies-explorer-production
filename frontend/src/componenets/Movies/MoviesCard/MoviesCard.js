@@ -1,6 +1,6 @@
 import React from "react"
 import btnRemoveMovie from "../../../images/removemovie.svg"
-import { converterDurationMovie } from "../../../utils/functionHelpers"
+import { converterDurationMovie } from "../../../utils/functionHelpers.js"
 import "./MoviesCard.css"
 
 function MoviesCard({

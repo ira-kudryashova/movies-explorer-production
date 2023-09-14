@@ -1,8 +1,8 @@
 import React from "react"
 import "../Form/Form.css"
 import Form from "../Form/Form"
-import { EMAIL_REGEX } from "../../utils/config"
-import useForm from "../../hooks/useForm"
+import { EMAIL_REGEX } from "../../utils/constants.js"
+import useForm from "../../hooks/useForm.js"
 
 function Register({ isLoading, getRegistrationUser }) {
   // Хук useForm()

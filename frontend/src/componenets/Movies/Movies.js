@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import "./Movies.css"
-import Footer from "../Footer/Footer"
-import Header from "../Header/Header"
-import { filterMovies, counterDurationMovie } from "../../utils/functionHelpers"
-import SearchForm from "./SearchForm/SearchForm"
-import MoviesCardList from "./MoviesCardList/MoviesCardList"
-import * as movies from "../../utils/MoviesApi"
+import Footer from "../Footer/Footer.js"
+import Header from "../Header/Header.js"
+import { filterMovies, counterDurationMovie } from "../../utils/functionHelpers.js"
+import SearchForm from "./SearchForm/SearchForm.js"
+import MoviesCardList from "./MoviesCardList/MoviesCardList.js"
+import * as movies from "../../utils/MoviesApi.js"
 
 function Movies({ loggedIn, savedMovies, getLikeMovie, onDeleteCard }) {
   const [isLoading, setIsLoading] = useState(false)

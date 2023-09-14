@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList.js"
-import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
+import Header from "../Header/Header.js"
+import Footer from "../Footer/Footer.js"
 import {
   filterMovies,
   counterDurationMovie,

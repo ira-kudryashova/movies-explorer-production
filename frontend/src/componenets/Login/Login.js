@@ -1,7 +1,7 @@
 import React from "react"
-import Form from "../Form/Form"
-import useForm from "../../hooks/useForm"
-import { EMAIL_REGEX } from "../../utils/config"
+import Form from "../Form/Form.js"
+import useForm from "../../hooks/useForm.js"
+import { EMAIL_REGEX } from "../../utils/constants.js"
 import "../Form/Form.css"
 
 function Login({ onAuthorization, isLoading }) {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import FilterCheckbox from "../FilterCheckbox/FilterCheckbox"
+import FilterCheckbox from "../FilterCheckbox/FilterCheckbox.js"
 import { useLocation } from "react-router-dom"
 import "./SearchForm.css"
 
