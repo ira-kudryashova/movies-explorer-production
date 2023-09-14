@@ -26,6 +26,7 @@ https://github.com/ira-kudryashova/movies-explorer-production/pull/1
 
 ## Ссылка на frontend и api
 API 158.160.1.69
+
 frontend https://api.final.irakudryashova.nomoredomainsicu.ru
 
 ## Верстка по макету  

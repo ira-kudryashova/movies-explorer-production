@@ -7,7 +7,7 @@ export const getCheckResponse = (res) => {
   return Promise.reject(`Error: ${res.status}`)
 }
 
-/** конвертация продолжительности фильмов в минутах в часы и минуты */
+/** конвертиртация продолжительности фильмов в минутах в часы и минуты */
 export function converterDurationMovie(duration) {
   const hours = Math.floor(duration / 60)
   const minutes = duration % 60
